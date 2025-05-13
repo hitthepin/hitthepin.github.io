@@ -14,8 +14,8 @@ website:
       
 format:
   html:
-    backgroundcolor: "#eeffee"
-    fontcolor: "darkgreen"
+    backgroundcolor: "#ffffff"
+    fontcolor: "#000000"
     mainfont: "monospace"
     theme: [cosmo, styles.scss]
 

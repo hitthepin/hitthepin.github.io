@@ -14,7 +14,7 @@ about: # https://quarto.org/docs/websites/website-about.html
       href: https://www.linkedin.com/in/aaron-kim-4ba7b7262/
 ---
 
-{{< lipsum 1 >}}
+Hello! Here is the website that I will present my Math 437 Final Project on!
 
 ## Education
 
