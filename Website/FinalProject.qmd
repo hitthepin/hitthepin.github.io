@@ -8,8 +8,8 @@ My project is geared towards answering the following question: to what extent do
 #| label: import data in this chunk
 library(readxl)
 
-test_scores <- read_excel(here::here("Data/standardized_test_scores.xlsx"))
-sad_percent <- read_excel(here::here("Data/felt_sad_2021.xlsx"))
+test_scores <- read_excel("C:/Users/aaronskim/Documents/Math 437/Data/standardized_test_scores.xlsx") 
+sad_percent <- read_excel("C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2021.xlsx") 
 
 # "SAT" and "ACT" refer to the average scores of the respective test for each state. 
 # "Sadness" refers to the percentage of high schoolers who reported feeling sad or hopeless.
