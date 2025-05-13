@@ -2,7 +2,7 @@
 title: Math 437 Final Project
 ---
 
-My project is geared towards answering the following question: to what extent does the mental well-being of students in the United States affect their academic performance? [*insert joke about how everyone is smart here*]
+My project is geared towards answering the following question: to what extent does the mental well-being of students in the United States affect their academic performance? 
 
 ```{r}
 #| label: import data in this chunk
