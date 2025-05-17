@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aaron Kim</title>
+<title>Math 437 Final Project – Aaron Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -33,6 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -67,9 +102,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Aaron Kim">
-<meta property="og:description" content="Student">
-<meta property="og:image" content="IMG_3340.jpg">
+<meta property="og:title" content="Math 437 Final Project – Aaron Kim">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="Aaron Kim">
 </head>
 
@@ -91,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./FinalProject.html"> 
+    <a class="nav-link active" href="./FinalProject.html" aria-current="page"> 
 <span class="menu-text">Math 437 Final Project</span></a>
   </li>  
 </ul>
@@ -111,42 +145,195 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-broadside column-page">
-  <div class="about-main">
-    <div class="about-entity" style="background-image: url('IMG_3340.jpg')"></div>
-    <div class="about-contents"><header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Aaron Kim</h1>
-<p class="subtitle lead">Student</p>
+<h1 class="title">Math 437 Final Project</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
-<p>Hello! Here is the website that I will use to present my Math 437 Final Project.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>University of XYZ, City | Location | Sept 20XX - June 20XX</p>
-</section>
-<section id="experience" class="level2">
-<h2 data-anchor-id="experience">Experience</h2>
-<p>Workplace | Job title | April 20XX - present</p>
+  
 
 
-</section>
-</main></div>
-  </div>
-  <div class="about-links">
-  <a href="https://github.com/hitthepin" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.linkedin.com/in/aaron-kim-4ba7b7262/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
+</header>
+
+
+<p>My project is geared towards answering the following question: to what extent does the mental well-being of students in the United States affect their academic performance?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'readxl' was built under R version 4.3.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/standardized_test_scores.xlsx"</span>) </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sad_percent <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2021.xlsx"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+• `` -&gt; `...2`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># "SAT" and "ACT" refer to the average scores of the respective test for each state. </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># "Sadness" refers to the percentage of high schoolers who reported feeling sad or hopeless.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Data sources: For the mental health: [[https://www.cdc.gov/yrbs/results/index.html]] For scores: [[https://nces.ed.gov/programs/digest/d21/tables/dt21_226.40.asp]]</p>
+<p>The first and most obvious limitation of the data is its limited scope in terms of time. Finding thorough data for both student’s mental well-being and their test scores was difficult, and 2021 was the most recent year where reliable data could be found for both. Any conclusions found while analyzing this data cannot and should not be applied to different points in time. In particular, the COVID-19 pandemic had a significant impact on both the country’s education system and on people’s mental well-being, further reinforcing the fact that data in recent times could be very different from data in the past.</p>
+<p>Adding onto this, it should also be noted that the tests themselves has changed over time. For example, the format of the SAT was recently changed as recently as 2016 [[https://www.princetonreview.com/college/sat-changes]]. If data is analyzed at different times, changes in the tests that are being examined could have an impact on the overall trends we see.</p>
+<p>Finally, it should be noted that not all high schoolers are included in the standardized test score’s data. Both the SAT and the ACT data sources include a column describing what proportion of high schoolers were actually surveyed - for several states, this proportion is less than 10%! Whatever conclusions apply to the specific set of high schoolers that the data was collected on might not apply to high schoolers as a whole.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">54</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>data[, <span class="dv">4</span>] <span class="ot">&lt;-</span> sad_percent[<span class="dv">5</span><span class="sc">:</span><span class="dv">55</span>, <span class="dv">2</span>]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data)[<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="st">"Sadness"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 4
+   State                  SAT   ACT Sadness
+   &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+ 1 Alabama               1159  18.7 36.9   
+ 2 Alaska                1119  20.6 &lt;NA&gt;   
+ 3 Arizona               1181  19.8 &lt;NA&gt;   
+ 4 Arkansas              1194  19   42.9   
+ 5 California            1057  26.1 &lt;NA&gt;   
+ 6 Colorado              1072  23.6 41.7   
+ 7 Connecticut           1072  27.2 35.6   
+ 8 Delaware               984  25.7 36.9   
+ 9 District of Columbia   987  25.6 36.3   
+10 Florida                993  20.4 39.3   
+# ℹ 41 more rows</code></pre>
 </div>
 </div>
- <!-- /main -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_removed <span class="ot">&lt;-</span> data[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">24</span>, <span class="dv">38</span>, <span class="dv">48</span>, <span class="dv">51</span>), ]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data_removed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 44 × 4
+   State                  SAT   ACT Sadness
+   &lt;chr&gt;                &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+ 1 Alabama               1159  18.7 36.9   
+ 2 Arkansas              1194  19   42.9   
+ 3 Colorado              1072  23.6 41.7   
+ 4 Connecticut           1072  27.2 35.6   
+ 5 Delaware               984  25.7 36.9   
+ 6 District of Columbia   987  25.6 36.3   
+ 7 Florida                993  20.4 39.3   
+ 8 Georgia               1086  22.6 43.5   
+ 9 Hawaii                1144  18.2 34.8   
+10 Idaho                  985  23   44.8   
+# ℹ 34 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data_removed<span class="sc">$</span>SAT, data_removed<span class="sc">$</span>Sadness, <span class="at">xlab =</span> <span class="st">"SAT Average"</span>, <span class="at">ylab =</span> <span class="st">"% Sadness"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a =</span> <span class="fl">50.066</span>, <span class="at">b =</span> <span class="sc">-</span><span class="fl">0.0089</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FinalProject_files/figure-html/Plotting the SAT vs sadness-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The linear model does give a negative slope (-0.0089), agreeing with my initial hypothesis about a negative correlation. However, the p-value is quite high (0.21), and a visual look at the graph shows data that is <em>very</em> spread out and apparently uncorrelated.</p>
+<p>The graph <em>does</em> visually demonstrate two extreme outliers mostly separate with the rest of the group within the context of comparing these two variables, as two data points possess middling SAT scores but very low sadness response percentages. These data points correspond to Vermont and New York. Removing them has a significant effect on the linear model:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data_removed2 <span class="ot">&lt;-</span> data_removed[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">29</span>, <span class="dv">41</span>),]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>SAT_linear2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Sadness <span class="sc">~</span> SAT, <span class="at">data =</span> data_removed2)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(SAT_linear2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Sadness ~ SAT, data = data_removed2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-6.9720 -2.7285  0.1387  2.7110  7.7018 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 52.301636   6.958995   7.516 3.63e-09 ***
+SAT         -0.010525   0.006192  -1.700    0.097 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.63 on 40 degrees of freedom
+Multiple R-squared:  0.06736,   Adjusted R-squared:  0.04404 
+F-statistic: 2.889 on 1 and 40 DF,  p-value: 0.09696</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|label: plotting the SAT vs. sad pt. 2</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data_removed2<span class="sc">$</span>SAT, data_removed2<span class="sc">$</span>Sadness, <span class="at">xlab =</span> <span class="st">"SAT Average"</span>, <span class="at">ylab =</span> <span class="st">"% Sadness"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a =</span> <span class="fl">52.302</span>, <span class="at">b =</span> <span class="sc">-</span><span class="fl">0.0105</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FinalProject_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Without Vermont and New York, the linear model suddenly becomes much improved, with the p-value decreasing to 0.09. However, this is still not at a level where the null hypothesis can be rejected: even after removing the variables, we cannot conclude that the two variables are related linearly.</p>
+<p>Next, I will examine for a relationship between ACT scores and the proportion of students who responded that they were sad. Once again, I will check for a linear relationship.</p>
+<p>Next, I will examine for a relationship between ACT scores and the proportion of students who responded that they were sad. Once again, I will check for a linear relationship.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ACT_linear <span class="ot">&lt;-</span> <span class="fu">lm</span>(Sadness <span class="sc">~</span> ACT, <span class="at">data =</span> data_removed)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ACT_linear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = Sadness ~ ACT, data = data_removed)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-9.5491 -2.0648  0.3667  2.5252  7.2024 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  47.6172     4.6382  10.266 5.09e-13 ***
+ACT          -0.3428     0.2084  -1.645    0.107    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.118 on 42 degrees of freedom
+Multiple R-squared:  0.06052,   Adjusted R-squared:  0.03815 
+F-statistic: 2.705 on 1 and 42 DF,  p-value: 0.1075</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(ACT_linear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: Sadness
+          Df Sum Sq Mean Sq F value Pr(&gt;F)
+ACT        1  45.88  45.879  2.7055 0.1075
+Residuals 42 712.23  16.958               </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data_removed<span class="sc">$</span>ACT, data_removed<span class="sc">$</span>Sadness, <span class="at">xlab =</span> <span class="st">"ACT Average"</span>, <span class="at">ylab =</span> <span class="st">"% Sadness"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">a =</span> <span class="fl">46.172</span>, <span class="at">b =</span> <span class="sc">-</span><span class="fl">0.3428</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="FinalProject_files/figure-html/plotting the ACT vs. sad-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Once again, the data appears to be vaguely learning towards a negative correlation (the ACT variable’s slope estimate is -0.34). However, the p-value is once again too large, at 0.108 (which is in fact quite close to the p-value obtained from the SAT linear test after removing its most extreme outliers). Once again, it cannot be concluded that there is a linear relationship between ACT scores and the mental health of students.</p>
+<p>The next step I would take in the process of analyzing this data would be attempting to use more complex regression methods (i.e.&nbsp;polynomial, spline, etc.). The fact that a negative slope was found in both linear models does give me some hope that my initial hypothesis is correct. However, looking at the scatterplots and seeing just how spread out the data points are leads me to believe that there isn’t much of a correlation happening at all - or at least, it leads me to believe that the sets of data I am currently using will not reveal a correlation.</p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -167,6 +354,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

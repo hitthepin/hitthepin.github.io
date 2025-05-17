@@ -15,6 +15,7 @@ about: # https://quarto.org/docs/websites/website-about.html
 ---
 
 Hello! Here is the website that I will use to present my Math 437 Final Project.
+
 ## Education
 
 University of XYZ, City \| Location \| Sept 20XX - June 20XX

@@ -47,8 +47,8 @@ library(readxl)
 ```{r}
 #| label: import data
 #| warning: false
-test_scores <- read_excel("C:/Users/aaronskim/Documents/Math 437/Data/standardized_test_scores.xlsx") 
-sad_percent <- read_excel("C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2021.xlsx")
+test_scores <- read_excel(here::here("Data/standardized_test_scores.xlsx"))
+sad_percent <- read_excel(here::here("Data/felt_sad_2021.xlsx"))
 ```
 
 
