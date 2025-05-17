@@ -15,7 +15,7 @@ sad_percent <- read_excel("C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2
 # "Sadness" refers to the percentage of high schoolers who reported feeling sad or hopeless.
 ```
 
-Data sources: 
+Data sources:
 For the mental health: [[https://www.cdc.gov/yrbs/results/index.html]]
 For scores: [[https://nces.ed.gov/programs/digest/d21/tables/dt21_226.40.asp]]
 
