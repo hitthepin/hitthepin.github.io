@@ -43,7 +43,18 @@ library(rsample)
 ```{r}
 #| label: import data
 #| warning: false
+test_scores <- read_excel(here::here("Data/standardized_test_scores.xlsx"))
+sad_percent <- read_excel(here::here("Data/felt_sad_2021.xlsx"))
+```
 
+
+```{r}
+#| label: putting the data together
+data <- test_scores[4:54, 1:3]
+data[, 4] <- sad_percent[5:55, 2]
+colnames(data)[4] <- "Sadness"
+
+data
 ```
 
 ### Data Limitations
