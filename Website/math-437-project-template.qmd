@@ -1,5 +1,5 @@
 ---
-title: "Replace this with an interesting title"
+title: "Mental Health and Standardized Test Scores"
 ---
 
 ## Motivation and Context
