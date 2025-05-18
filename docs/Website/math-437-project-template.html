@@ -168,10 +168,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="motivation-and-context" class="level2">
 <h2 class="anchored" data-anchor-id="motivation-and-context">Motivation and Context</h2>
+<p>I spent a significant amount of time in high school engaged in seriously rigorous coursework, such as AP classes, which somewhat took a toll on my mental well-being. More than a few times during this period of my life, I said to myself “It would really be nice if there was someone who I could talk to about all this.” Though thankfully I’ve managed to achieve a much healthier balance in my life since entering college, I still retain an interest in the mental health of students, which is why I chose to center my project on them.</p>
 <p>It is commonly said that America today is in a mental health crisis - the CDC states that a staggering one in five Americans suffer from anxiety or depression, with the youth being even more severely effected [https://www.cdc.gov/mental-health/about/what-cdc-is-doing.html]. With the increase in the severity in this crisis has apparently come an increase in awareness and resources available to help meet it, however. In this project I intend to only cover mental health issues and educational results that are common and familiar to the average person (i.e., depression and anxiety for mental health, and standardized test scores for educational results). Thus, no additional context is required for a general audience to understand the concepts at play.</p>
 </section>
 <section id="main-objective" class="level2">
 <h2 class="anchored" data-anchor-id="main-objective">Main Objective</h2>
+<p>The objective of this project is to determine whether the mental well-being of students can be associated</p>
 </section>
 <section id="packages-used-in-this-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="packages-used-in-this-analysis">Packages Used In This Analysis</h2>
@@ -212,21 +214,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="https://ggplot2.tidyverse.org/">ggplot2</a></td>
 <td>to create nice-looking and informative graphs</td>
 </tr>
+<tr class="even">
+<td>[readxl]</td>
+<td>to load the data</td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="data-description" class="level2">
 <h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
+<p>SAT data was gathered from this site: [[https://nces.ed.gov/programs/digest/d21/tables/dt21_226.40.asp]], while ACT data was gathered from this site: [[https://www.act.org/content/dam/act/unsecured/documents/2021/2021-Average-ACT-Scores-by-State.pdf]]. The information on standardized test performances comes from the National Center for Education Statistics, a federal statistics agency whose entire job it is to collect data related to educational results. They state that their data comes from College Board, the organization that runs the SAT. The data about the ACT comes from act.org itself.</p>
+<p>To supplement this information, pre-COVID data about the SAT Scores by state were gathered from Kaggle: [[https://www.kaggle.com/datasets/mexwell/us-school-scores]].</p>
+<p>For the mental health: [[https://www.cdc.gov/yrbs/results/index.html]], then follow to “Youth Online High School Results” and “Unintentional Injuries and Violence”. The CDC is the Center for Disease Control, an American public health institution. As their stated mission is to protect and improve public health in the country, mental illnesses fall under their jurisdiction, which is why data on mental health was collected by the organization. From the CDC’s “Youth Risk Behavior Surveillance System”, I initially began using the proportion of high school students in 2021 who “felt sad or hopeless” in order to represent overall mental well-being of students. The “Youth Online”’s main page says that their data is collected from the Global School-Based Student Health Survey (GSHS), a survey organized by the World Health Organization to “provide accurate data on health behaviors and protective factors among students” [[https://www.who.int/teams/noncommunicable-diseases/surveillance/systems-tools/global-school-based-student-health-survey/methodology]].</p>
+<p>In addition to this, I am also using other statistics gathered by the YRBSS. These include the percentage of surveyed high schoolers who actually attempted suicide, the percentage who were not getting 8 or more hours of sleep, and the percentage who reported that they were binge drinking. These factors were selected out of the many different YRBSS surveys due to all of them commonly being associated with</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>test_scores <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/standardized_test_scores.xlsx"</span>) </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sad_percent <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2021.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>test_scores2021 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/standardized_test_scores.xlsx"</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sad_percent2021 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:/Users/aaronskim/Documents/Math 437/Data/felt_sad_2021.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> test_scores[<span class="dv">4</span><span class="sc">:</span><span class="dv">54</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data[, <span class="dv">4</span>] <span class="ot">&lt;-</span> sad_percent[<span class="dv">5</span><span class="sc">:</span><span class="dv">55</span>, <span class="dv">2</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data)[<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="st">"Sadness"</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data2021 <span class="ot">&lt;-</span> test_scores2021[<span class="dv">4</span><span class="sc">:</span><span class="dv">54</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data2021[, <span class="dv">4</span>] <span class="ot">&lt;-</span> sad_percent2021[<span class="dv">5</span><span class="sc">:</span><span class="dv">55</span>, <span class="dv">2</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(data2021)[<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="st">"Sadness"</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data2021</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 51 × 4
    State                  SAT   ACT Sadness

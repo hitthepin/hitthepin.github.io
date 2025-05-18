@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Title>Currently Were Binge Drinking(four or more drinks of alcohol in a row if they are female or five or more drinks of alcohol in a row if they are male, within a couple of hours, on at least 1 day during the 30 days before the survey) High School Youth Risk Behavior Survey, 2021</Title>
+  <Author>CDC</Author>
+  <LastAuthor>CDC User</LastAuthor>
+  <Created>2025-05-18T00:38:14Z</Created>
+  <Company>Northrop Grumman</Company>
+  <HyperlinkBase>https://nccd.cdc.gov/youthonline/App/Results.aspx?TT=B&amp;OUT=0&amp;SID=HS&amp;QID=H43&amp;LID=LL&amp;YID=2021&amp;LID2=&amp;YID2=&amp;COL=S&amp;ROW1=N&amp;ROW2=N&amp;HT=QQ&amp;LCT=LL&amp;FS=S1&amp;FR=R1&amp;FG=G1&amp;FA=A1&amp;FI=I1&amp;FP=P1&amp;FSL=S1&amp;FRL=R1&amp;FGL=G1&amp;FAL=A1&amp;FIL=I1&amp;FPL=P1&amp;PV=&amp;TST=False&amp;C1=&amp;C2=&amp;QP=G&amp;DP=1&amp;VA=CI&amp;CS=Y&amp;SYID=&amp;EYID=&amp;SC=DEFAULT&amp;SO=ASC</HyperlinkBase>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11025</WindowHeight>
+  <WindowWidth>23040</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="TABLE B">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="52" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="500.25"/>
+   <Row>
+    <Cell ss:MergeAccross="3"><Data ss:Type="String">Currently Were Binge Drinking(four or more drinks of alcohol in a row if they are female or five or more drinks of alcohol in a row if they are male, within a couple of hours, on at least 1 day during the 30 days before the survey) High School Youth Risk Behavior Survey, 2021</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Location %</Data></Cell>
+    <Cell><Data ss:Type="String">Total %</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:MergeAccross="3"><Data ss:Type="String">National</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">United States&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">10.5†</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:MergeAccross="3"><Data ss:Type="String">States</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Alabama&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Alaska&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Arizona&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Arkansas&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">California&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Colorado&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">13.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Connecticut&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">7.0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Delaware&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">8.4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Florida&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">12.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Georgia&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">14.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Hawaii&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">8.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Idaho&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Illinois&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Indiana&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">10.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Iowa&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kansas&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">13.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Kentucky&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">8.0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Louisiana&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Maine&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Maryland&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Massachusetts&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Michigan&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">6.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Mississippi&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Missouri&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">14.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Montana&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">16.4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Nebraska&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Nevada&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">10.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">New Hampshire&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">New Jersey&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">15.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">New Mexico&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">8.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">New York (Excluding New York City)&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">North Carolina&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.9</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">North Dakota&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">14.0</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Ohio&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">12.6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Oklahoma&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">13.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Pennsylvania&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Rhode Island&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">8.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">South Carolina&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">9.3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">South Dakota&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">11.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Tennessee&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">13.4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Texas&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">13.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Utah&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">3.6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Vermont&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">12.1</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Virginia&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">10.5</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">West Virginia&#160;</Data></Cell>
+    <Cell><Data ss:Type="String">12.2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Wisconsin&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Wyoming&#160;</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>44</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
