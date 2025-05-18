@@ -191,11 +191,19 @@ SAT_linearmodel <- lm(SAT ~ Sadness + Not_Sleeping_Enough + Attempted_Suicide + 
 ACT_linearmodel <- lm(ACT ~ Sadness + Not_Sleeping_Enough + Attempted_Suicide + Binge_Drinkers, data = train_data2021)
 ```
 
-<!-- Include accuracy test: i.e. RMSE in comparison to the test set.-->
+A residuals vs. fitted plot for each of the models gives us the following: 
+
+```{r}
+plot(SAT_linearmodel, 1)
+
+plot(ACT_linearmodel, 1)
+```
+
+We can see that in both of these plots that a notable amount of curvature within the LOESS smoother (the red line). The existence of this deviation from 0 (particularly in the ACT model) suggests there may be a pattern within the residuals. This calls into question the veracity of a linear relationship - it is not an adequate way to describe the relationship between mental health indicators with the test scores.
 
 ## Insights
 
-An cursory examination of the summaries for both of the linear models shows the following: 
+An cursory examination of the summaries for both of the linear models supports the above idea that there is little relationship between the predictors and the response: 
 
 ```{r}
 summary(SAT_linearmodel)
@@ -205,11 +213,11 @@ summary(SAT_linearmodel)
 summary(ACT_linearmodel)
 ```
 
-In both cases, the $R^2$ value is very low (0.166 for SAT, 0.2802 for ACT). This further demonstrates that a linear model is inadequate for describing the relationship between test scores and the selected mental health indicators. 
+In both cases, the $R^2$ value is very low (0.166 for SAT, 0.2802 for ACT). An examination of both these values and the residual graphs above lead to the conclusion that a linear model is inadequate for describing the relationship between test scores and the selected mental health indicators. 
 
 ### Limitations and Future Work
 
-One of the limitations that may be at play here is in the stanardized test scores. Here is a graph of the data I found showing the SAT scores vs. the ACT scores. Each dot represents one of the fifty states (and the District of Columbia) during the year of 2021: 
+One of the limitations that may be at play here is in the stanardized test scores data. Here is a graph of the data I found showing the SAT scores vs. the ACT scores. Each dot represents one of the fifty states (and the District of Columbia) during the year of 2021: 
 
 ```{r}
 ggplot(data = data2021_final, aes(x = SAT, y = ACT)) +
@@ -219,7 +227,7 @@ ggplot(data = data2021_final, aes(x = SAT, y = ACT)) +
 
 Bizarrely, there appears to be no relationship between the two sets of test scores at all - in fact, the (highly inaccurate) line of best fit claims that there is an inverse relationship between the two variables! This is highly counterintuitive, as one would expect these scores to be directly correlated - an increase in one ought to see an increase in the other, as better students perform better on tests in general. This leads me to suspect that either one or both of the test score data sets is inaccurate, or that each survey examined a different part of each state's population such that there was little to no overlap. Either way, the above result may be partly causing the lack of any meaningful correlation between the examined variables. If I were to do this again, I would make absolutely certain that the test score data was being drawn from as reliable of a source as possible.
 
-Additionally, in this analysis I have made some assumptions that a deteriorating mental health has a simple, straightforward relationship (linear) that can be represented using common methods. This is, of course, a very big assumption. The human mind's relationship with these test scores may not follow any logical relationship at all. 
+Additionally, in this analysis I have made some assumptions that a deteriorating mental health has a simple, straightforward relationship (linear) that can be represented using common methods. This is, of course, a very big assumption. The human mind's relationship with these test scores may not be subject to any common, simple kind of relationship at all. 
 
 ### Reflection (Optional Subsection)
 
