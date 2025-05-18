@@ -101,7 +101,7 @@ One of the more pertinent limitations to this data is the fact that not every hi
 
 Additionally, the YRBSS data possesses is incomplete - it is missing data for a few different states. This can be worked around reasonably via data imputation, however, it is still a potential issue worth noting. 
 
-Finally, the survey-based data collection of the YRBSS (as described here: [[https://www.cdc.gov/yrbs/methods/index.html]]) means that biases may appear in its data collection. For example, some of the students surveyed may have responded dishonestly. 
+Finally, the survey-based data collection of the YRBSS (as described here: [[https://www.cdc.gov/yrbs/methods/index.html]]) means that biases may appear in its data collection. For example, some of the students surveyed may have responded dishonestly. On top of this, observational studies such as these surveys cannot prove causation. Even if some connection between test scores is seen within the data, it will not prove that one is caused by the other. Perhaps lowered test scores cause depression, perhaps a worsened mood causes a lack of motivation and lower test scores, or perhaps some combination of these is true - however, this analysis cannot determinen which of these is true.
 
 ## Data Wrangling (Optional Section)
 
@@ -171,11 +171,53 @@ Interestingly, all of the distributions for each of the four critera appear to b
 
 ## Modeling
 
-It is natural to assume that an inverse relationship exists between test scores and the various selected indicators for mental health. That is, 
+It is natural to assume that an inverse relationship exists between test scores and the various selected indicators for mental health. That is, an increase in test scores should precipiate a decrease in the percentage of people suffering from various indications of mental health issues. 
+
+Due to this, I will test whether a linear relationship between test scores and these mental health indicators. I am doing this under the assumption that worsening mental health causes worse test scores at a linear rate - a drop in mental health will result in a drop in academic performance, regardless of whether you were originally perfectly fine or in the throes of depression. I will create a model for both the SAT and the ACT model. 
+
+```{r}
+set.seed(437)
+
+sample_index <- sample(seq_len(51), size = 41)
+train_data2021 <- data2021_final[sample_index,]
+test_data2021 <- data2021_final[-sample_index,]
+```
+
+```{r}
+SAT_linearmodel <- lm(SAT ~ Sadness + Not_Sleeping_Enough + Attempted_Suicide + Binge_Drinkers, data = train_data2021)
+```
+
+```{r}
+ACT_linearmodel <- lm(ACT ~ Sadness + Not_Sleeping_Enough + Attempted_Suicide + Binge_Drinkers, data = train_data2021)
+```
 
 ## Insights
 
+An cursory examination of the summaries for both of the linear models shows the following: 
+
+```{r}
+summary(SAT_linearmodel)
+```
+
+```{r}
+summary(ACT_linearmodel)
+```
+
+In both cases, the $R^2$ value is very low (0.166 for SAT, 0.2802 for ACT). This further demonstrates that a linear model is inadequate for describing the relationship between test scores and the selected mental health indicators. 
+
 ### Limitations and Future Work
+
+One of the limitations that may be at play here is in the stanardized test scores. Here is a graph of the data I found showing the SAT scores vs. the ACT scores. Each dot represents one of the fifty states (and the District of Columbia) during the year of 2021: 
+
+```{r}
+ggplot(data = data2021_final, aes(x = SAT, y = ACT)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+Bizarrely, there appears to be no relationship between the two sets of test scores at all - in fact, the (highly inaccurate) line of best fit claims that there is an inverse relationship between the two variables! This is highly counterintuitive, as one would expect these scores to be directly correlated - an increase in one ought to see an increase in the other, as better students perform better on tests in general. This leads me to suspect that either one or both of the test score data sets is inaccurate, or that each survey examined a different part of each state's population such that there was little to no overlap. Either way, the above result may be partly causing the lack of any meaningful correlation between the examined variables. If I were to do this again, I would make absolutely certain that the test score data was being drawn from as reliable of a source as possible.
+
+Additionally, in this analysis I have made some assumptions that a deteriorating mental health has a simple, straightforward relationship (linear) that can be represented using common methods. This is, of course, a very big assumption. The human mind's relationship with these test scores may not follow any logical relationship at all. 
 
 ### Reflection (Optional Subsection)
 
